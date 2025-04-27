@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Hub - Terms of Service</title>
+    <style>
+        /* CSS Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #f0f0f0;
+            background-color: #121212;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #1e1e2e;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #7e57c2;
+            margin-left: 10px;
+        }
+
+        .logo-icon {
+            color: #7e57c2;
+            font-size: 2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: #f0f0f0;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        .nav-links a:hover {
+            color: #7e57c2;
+            background-color: rgba(126, 87, 194, 0.1);
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #f0f0f0;
+        }
+
+        /* Terms of Service Content */
+        .terms-content {
+            padding: 60px 0;
+        }
+
+        .terms-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .terms-header h1 {
+            font-size: 2.5rem;
+            color: #7e57c2;
+            margin-bottom: 15px;
+        }
+
+        .terms-header p {
+            color: #bbb;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .terms-section {
+            background-color: #1e1e2e;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .terms-section h2 {
+            color: #7e57c2;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            border-bottom: 1px solid #2a2139;
+            padding-bottom: 10px;
+        }
+
+        .terms-section h3 {
+            color: #e0e0e0;
+            margin: 20px 0 15px;
+            font-size: 1.3rem;
+        }
+
+        .terms-section p {
+            margin-bottom: 15px;
+            color: #bbb;
+        }
+
+        .terms-section ul {
+            margin-bottom: 20px;
+            margin-left: 20px;
+        }
+
+        .terms-section li {
+            margin-bottom: 10px;
+            color: #bbb;
+        }
+
+        .terms-section strong {
+            color: #e0e0e0;
+        }
+
+        .effective-date {
+            text-align: center;
+            margin-top: 50px;
+            color: #888;
+            font-style: italic;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a2e;
+            padding: 40px 0 20px;
+            margin-top: 80px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .footer-section h3 {
+            color: #7e57c2;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #bbb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #7e57c2;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icons a {
+            color: #bbb;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #7e57c2;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #2a2139;
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #7e57c2;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            transition: background-color 0.3s ease;
+        }
+
+        .back-to-top:hover {
+            background-color: #6a3cbf;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <a href="#" class="logo">
+                <span class="logo-icon">🎮</span>
+                <span class="logo-text">Gaming Hub</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Games</a></li>
+                <li><a href="#">Leaderboards</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+            <div class="mobile-menu">☰</div>
+        </div>
+    </header>
+
+    <!-- Terms of Service Content -->
+    <main class="terms-content">
+        <div class="container">
+            <div class="terms-header">
+                <h1>Terms of Service</h1>
+                <p>Please read these Terms of Service carefully before accessing or using Gaming Hub's platform and services.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>1. Acceptance of Terms</h2>
+                <p>By accessing or using the Gaming Hub platform, website, and services (collectively, the "Services"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not access or use our Services.</p>
+                <p>Gaming Hub reserves the right to modify these Terms at any time. We will provide notice of any material changes through our platform or by other means. Your continued use of our Services after such modifications constitutes your acceptance of the updated Terms.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>2. Eligibility</h2>
+                <p>You must be at least 13 years old to use Gaming Hub. If you are under 18, you represent that you have your parent's or legal guardian's permission to use the Services, and they have read and agree to these Terms on your behalf.</p>
+                <p>By using our Services, you represent and warrant that:</p>
+                <ul>
+                    <li>You have the legal capacity to enter into these Terms</li>
+                    <li>You will use our Services in compliance with applicable laws and regulations</li>
+                    <li>You will not use our Services if you have previously been suspended or banned</li>
+                </ul>
+            </div>
+
+            <div class="terms-section">
+                <h2>3. Account Registration and Security</h2>
+                
+                <h3>3.1 Account Creation</h3>
+                <p>To access certain features of our Services, you may need to create an account. When registering, you agree to provide accurate, current, and complete information and to update your information as necessary to maintain its accuracy.</p>
+                
+                <h3>3.2 Account Security</h3>
+                <p>You are responsible for:</p>
+                <ul>
+                    <li>Maintaining the confidentiality of your account credentials</li>
+                    <li>All activities that occur under your account</li>
+                    <li>Notifying Gaming Hub immediately of any unauthorized use of your account</li>
+                </ul>
+                <p>Gaming Hub will not be liable for any loss or damage arising from your failure to protect your account information.</p>
+                
+                <h3>3.3 Account Termination</h3>
+                <p>We reserve the right to suspend or terminate your account and access to our Services, without prior notice or liability, for any reason, including if we believe you have violated these Terms.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>4. User Conduct</h2>
+                <p>While using our Services, you agree not to:</p>
+                <ul>
+                    <li>Violate any applicable laws or regulations</li>
+                    <li>Infringe upon the rights of others, including intellectual property rights</li>
+                    <li>Post or transmit unauthorized commercial communications</li>
+                    <li>Upload viruses or malicious code</li>
+                    <li>Attempt to access accounts, systems, or data you are not authorized to access</li>
+                    <li>Interfere with or disrupt our Services or servers</li>
+                    <li>Create multiple accounts for deceptive or abusive purposes</li>
+                    <li>Use cheats, automation software, hacks, bots, or any unauthorized third-party software</li>
+                    <li>Engage in any behavior that is harmful, threatening, abusive, harassing, defamatory, or otherwise objectionable</li>
+                    <li>Sell, transfer, or share your account</li>
+                </ul>
+            </div>
+
+            <div class="terms-section">
+                <h2>5. User Content</h2>
+                
+                <h3>5.1 Content Ownership</h3>
+                <p>You retain ownership of any content you create and share on our platform ("User Content"). By submitting User Content, you grant Gaming Hub a non-exclusive, transferable, sub-licensable, royalty-free, worldwide license to use, copy, modify, create derivative works based on, distribute, publicly display, and otherwise exploit such User Content in connection with our Services.</p>
+                
+                <h3>5.2 Content Restrictions</h3>
+                <p>You agree that your User Content will not:</p>
+                <ul>
+                    <li>Infringe on the rights of any third party</li>
+                    <li>Contain illegal, obscene, offensive, or harmful material</li>
+                    <li>Contain viruses or malicious code</li>
+                    <li>Violate any Gaming Hub community guidelines</li>
+                </ul>
+                
+                <h3>5.3 Content Monitoring</h3>
+                <p>Gaming Hub reserves the right, but has no obligation, to monitor, review, or remove any User Content at our sole discretion.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>6. Virtual Items and Purchases</h2>
+                
+                <h3>6.1 Virtual Currency and Items</h3>
+                <p>Our Services may include virtual currencies, tokens, or items that can be purchased with real money or earned through gameplay. These virtual items:</p>
+                <ul>
+                    <li>Are licensed, not sold, to you</li>
+                    <li>Have no cash value and cannot be exchanged for real money or items of value outside our platform</li>
+                    <li>May not be transferred, sold, or traded to other users unless explicitly permitted by Gaming Hub</li>
+                </ul>
+                
+                <h3>6.2 Purchases</h3>
+                <p>All purchases are final and non-refundable, except as required by applicable law. Gaming Hub reserves the right to modify, manage, control, or eliminate virtual items without notice or liability.</p>
+                
+                <h3>6.3 Subscription Services</h3>
+                <p>If you subscribe to a premium service, you agree to the recurring payment terms presented at the time of purchase. You may cancel your subscription at any time, but no refunds will be provided for partial subscription periods.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>7. Intellectual Property Rights</h2>
+                
+                <h3>7.1 Gaming Hub Property</h3>
+                <p>The Gaming Hub platform, logo, trademarks, game content, and other materials are owned by Gaming Hub or its licensors and are protected by copyright, trademark, and other intellectual property laws. You may not use, copy, or distribute our proprietary content without express permission.</p>
+                
+                <h3>7.2 Limited License</h3>
+                <p>Gaming Hub grants you a limited, non-exclusive, non-transferable, revocable license to access and use our Services for personal, non-commercial purposes.</p>
+                
+                <h3>7.3 Feedback</h3>
+                <p>If you provide suggestions or feedback regarding our Services, you grant Gaming Hub a non-exclusive, perpetual, irrevocable, royalty-free right to use, implement, and commercialize your feedback in any way.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>8. Disclaimers</h2>
+                <p>THE SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.</p>
+                <p>Gaming Hub does not warrant that:</p>
+                <ul>
+                    <li>The Services will function uninterrupted, secure, or available at any particular time or location</li>
+                    <li>Any errors or defects will be corrected</li>
+                    <li>The Services are free of viruses or other harmful components</li>
+                </ul>
+            </div>
+
+            <div class="terms-section">
+                <h2>9. Limitation of Liability</h2>
+                <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT SHALL GAMING HUB BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING WITHOUT LIMITATION DAMAGES FOR LOSS OF PROFITS, DATA, USE, OR OTHER INTANGIBLE LOSSES.</p>
+                <p>Gaming Hub's total liability to you for any claims arising from or related to these Terms or our Services shall not exceed the amount you paid to Gaming Hub, if any, in the six months preceding the event giving rise to the liability.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>10. Indemnification</h2>
+                <p>You agree to defend, indemnify, and hold harmless Gaming Hub and its officers, directors, employees, and agents from and against any claims, liabilities, damages, losses, and expenses, including reasonable attorneys' fees, arising from or in any way connected with:</p>
+                <ul>
+                    <li>Your access to or use of our Services</li>
+                    <li>Your violation of these Terms</li>
+                    <li>Your violation of any third-party right</li>
+                    <li>Your User Content</li>
+                </ul>
+            </div>
+
+            <div class="terms-section">
+                <h2>11. Dispute Resolution</h2>
+                
+                <h3>11.1 Governing Law</h3>
+                <p>These Terms shall be governed by and construed in accordance with the laws of the State of California, without regard to its conflict of laws principles.</p>
+                
+                <h3>11.2 Arbitration</h3>
+                <p>Any dispute arising from these Terms or your use of our Services shall be resolved through binding arbitration conducted by the American Arbitration Association under its Commercial Arbitration Rules. The arbitration shall take place in Los Angeles, California, and judgment on the arbitration award may be entered in any court having jurisdiction.</p>
+                
+                <h3>11.3 Class Action Waiver</h3>
+                <p>YOU AGREE THAT DISPUTES BETWEEN YOU AND GAMING HUB WILL BE RESOLVED BY BINDING, INDIVIDUAL ARBITRATION AND YOU WAIVE YOUR RIGHT TO PARTICIPATE IN A CLASS ACTION LAWSUIT OR CLASS-WIDE ARBITRATION.</p>
+                
+                <h3>11.4 Exceptions</h3>
+                <p>Nothing in this section shall prevent either party from seeking injunctive or other equitable relief from the courts for matters related to data security, intellectual property, or unauthorized access to the Services.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>12. General Provisions</h2>
+                
+                <h3>12.1 Entire Agreement</h3>
+                <p>These Terms, together with our Privacy Policy and any other legal notices published by Gaming Hub, constitute the entire agreement between you and Gaming Hub concerning our Services.</p>
+                
+                <h3>12.2 Waiver</h3>
+                <p>The failure of Gaming Hub to enforce any right or provision of these Terms will not be deemed a waiver of such right or provision.</p>
+                
+                <h3>12.3 Severability</h3>
+                <p>If any provision of these Terms is found to be invalid or unenforceable, the remaining provisions will remain in full force and effect.</p>
+                
+                <h3>12.4 Assignment</h3>
+                <p>You may not assign or transfer these Terms without the prior written consent of Gaming Hub. Gaming Hub may assign these Terms without restriction.</p>
+                
+                <h3>12.5 Contact Information</h3>
+                <p>If you have any questions about these Terms, please contact us at:</p>
+                <p>Email: legal@gaminghub.com</p>
+                <p>Address: Gaming Hub Headquarters, 123 Game Street, Digital City, DC 12345</p>
+            </div>
+
+            <p class="effective-date">Effective Date: April 27, 2025</p>
+        </div>
+    </main>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">↑</a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Gaming Hub</h3>
+                    <p>The best free online games platform. Play anywhere, anytime without downloads.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Games</a></li>
+                        <li><a href="#">Leaderboards</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#" class="active">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">GDPR Compliance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#">📘</a>
+                        <a href="#">📱</a>
+                        <a href="#">📸</a>
+                        <a href="#">📢</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2025 Gaming Hub. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Functionality -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenu.addEventListener('click', () => {
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
+        
+        // Back to Top Button
+        const backToTopButton = document.querySelector('.back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.style.display = 'flex';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+        
+        backToTopButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
